@@ -20,15 +20,15 @@ def enc12(n):
 def dec12(n):
   r = 2
   while n&3 != 3 or n&7 == 7:
-    if n&1: r ^= 1
+    if n&1: r |= 1
     else: r <<= 1
     n = n >> 1
   return r - 3
 
-#these alt-versions appear to be using larger number of bits
+#these alt-versions use larger number of bits
 def enc12a(n):
-  r = 3 #termination code
   n += 1
+  r = 3 #termination code
   while n>0:
     if n&1: r = (r<<2)|1
     else: r <<= 1
@@ -67,8 +67,7 @@ def dec4(n):
     n >>= 2
   return r
 
-for n in range(0,30):
-  p = "%s11"%path12(n+3)[2:]
-  print("%3d->%4d:%2d,%2d,%2d,%s" %
-        (n,enc12(n),len(p),p.count('1'),p.count('0')
-        ,"{0:b}".format(enc12(n))[::-1]))
+for n in range(0,256):
+  p = "{0:b}".format(enc4(n))[::-1]
+  print("%3d->%4d:%2d,%s" %
+        (n,dec4(enc4(n)),len(p),p))

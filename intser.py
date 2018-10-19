@@ -8,15 +8,6 @@ def path12(n):
   if n&1: return "%s01" % path12(n/2)
   else: return "%s0" % path12(n/2)
 
-def enc12p(p):
-  n = 0
-  r = 0
-  for c in p:
-    r |= int(c)<<n
-    n += 1
-  r += 3<<n
-  return r
-
 def enc12(n):
   n += 3
   r = 3 #termination code

@@ -34,7 +34,7 @@ Now we don't really need (),+,-, because order is linear:
     14:121212
     15:1212121
 
-In the canonic form of these numbers, noting that after 1, all numbers begin with 12, by shifting the indexing by 2, we can write these numbers in binary system (where 1 = 1 and 0 = 2):
+In the canonic form of these numbers, noticing that after 1, all numbers begin with 12, by shifting the indexing by 2, we can write these numbers in binary system (where 1 = 1 and 0 = 2):
 
      1:-----
      2:-----

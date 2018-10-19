@@ -8,6 +8,7 @@ def path12(n):
   if n&1: return "%s01" % path12(n/2)
   else: return "%s0" % path12(n/2)
 
+#codes likes 1111, 11111,... are free
 def enc12(n):
   n += 2
   r = 3 #termination code

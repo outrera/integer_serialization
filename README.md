@@ -54,4 +54,6 @@ In the canonic form of these numbers, noting that after 1, all numbers begin wit
 
 Noticing that 1 is never repeated twice, we can use 110 as a terminator, and then we can write such numbers one after another in juxtapostion, and decode them later without much fuzz. To translate such numbers into the usual form, only two operations are needed: bitwise shifting to the left (<<), and setting the lower bit of the register to 1 (bitwise or). 
 
+That is not Huffman encoding efficient, but then again, it is simpler and supports objects of any length, without specifying that length anywhere. Kind of C/C++ null terminated strings, but in bitstream. 
+
 --Nikita Sadkov

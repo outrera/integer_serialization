@@ -9,7 +9,7 @@ def path12(n):
   else: return "%s0" % path12(n/2)
 
 def enc12(n):
-  n += 3
+  n += 2
   r = 3 #termination code
   while n>1:
     if n&1: r = (r<<2)|2
@@ -23,7 +23,7 @@ def dec12(n):
     if n&1: r |= 1
     else: r <<= 1
     n = n >> 1
-  return r - 3
+  return r - 2
 
 #these alt-versions use larger number of bits
 def enc12a(n):

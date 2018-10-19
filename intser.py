@@ -21,12 +21,9 @@ def enc12(n):
   n += 3
   r = 3 #termination code
   while n>1:
-    if n&1:
-      n >>= 1
-      r = (r<<2)|2
-    else:
-      n >>= 1
-      r = r<<1
+    if n&1: r = (r<<2)|2
+    else: r = r<<1
+    n >>= 1
   return r>>1
 
 def dec12(n):

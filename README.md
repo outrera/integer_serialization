@@ -34,7 +34,7 @@ Now we don't really need (),+,-, because order is linear:
     14:121212
     15:1212121
 
-In the canonic writing of these numbers, noting that after 1, all numbers begin with 12, by moving the indexing by 2, you can write these numbers in binary system (where 1 = 1 and 0 = 2):
+In the canonic form of these numbers, noting that after 1, all numbers begin with 12, by shifting the indexing by 2, we can write these numbers in binary system (where 1 = 1 and 0 = 2):
 
      1:-----
      2:-----
@@ -52,6 +52,6 @@ In the canonic writing of these numbers, noting that after 1, all numbers begin 
     14:1010
     15:10101
 
-Noticing that 1 is never repeated twice, you can use 110 as a terminator, and then we can write such numbers one after another in juxtapostion, and decode them later without much fuzz. To translate such numbers into the usual form, only two operations are needed: bitwise shifting to the left (<<), and setting the lower bit of the register to 1 (bitwise or). 
+Noticing that 1 is never repeated twice, we can use 110 as a terminator, and then we can write such numbers one after another in juxtapostion, and decode them later without much fuzz. To translate such numbers into the usual form, only two operations are needed: bitwise shifting to the left (<<), and setting the lower bit of the register to 1 (bitwise or). 
 
 --Nikita Sadkov
